@@ -81,3 +81,9 @@
     update_cache: yes
   tags:
     - docker
+# binding docker service
+- lineinfile:
+       path: /lib/systemd/system/docker.service
+       regexp: '^ExecStart='
+       line: 'ExecStart=/usr/bin/dockerd -H 0.0.0.0:2376'
+
