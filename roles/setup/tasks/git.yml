@@ -1,0 +1,6 @@
+
+# install basic tools
+   - name:       install git
+     apt:        name=git state=latest update_cache=yes
+
+

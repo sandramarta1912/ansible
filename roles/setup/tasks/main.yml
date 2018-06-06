@@ -10,7 +10,14 @@
 # Import docker tasks
 - name: Import docker tasks
   include_tasks: docker.yml
- 
+# Import git tasks
+- name: Import git tasks
+  include_tasks: git.yml
+
+# Import ufw tasks
+- name: Import ufw tasks
+  include_tasks: ufw.yml
+
 # sudo apt-get autoclean
 - name: Remove useless apt packages from the cache
   apt:
